@@ -9,8 +9,9 @@
     <div class="container" style="width: 800px; margin:0 auto;">
         {% if user.is_authenticated %}
         <a href="{% url 'logout' %}">Logout</a>
-        
-        
+        ||||
+        <a class="btn btn-primary" href="{% url 'users_pdf_view' user.pk %}" role="button">Get Your Report Here</a>
+            </hr>
         <h2>All Posts</h2>
         <hr/>
         <h4>First Post</h4>

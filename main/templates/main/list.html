@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+User's
+{% endblock title  %} 
+
+
+{% block content %}
+    {% for user in object_list %}
+        {{ user }}
+        <a href='{% url 'users_pdf_view' user.pk %}'><button class="btn btn-primary">PDF</button></a>
+        <br>
+        <hr>
+    {% endfor %}
+{% endblock content %}
